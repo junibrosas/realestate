@@ -2078,7 +2078,7 @@
 	div.popup ul li a:hover,
 	div.popup ul li a:focus,
 	div.popup ul li a:active {
-		color:#F6700E
+		color:#438b3b
 	}
 
 	.btn-primary:hover,
@@ -2095,24 +2095,24 @@
 	.ps-desc .status,
 	.pricing-table > .price .name,
 	ul.real-estate-cats-widget li ul li:before {
-		background-color:#F6700E;
+		background-color:#438b3b;
 		color: #ffffff;
 		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	}
 	
 	.form-control:focus,
 	ul.real-estate-cats-widget li ul {
-		border-color:#F6700E;
+		border-color:#438b3b;
 	}
 	
 	.btn-primary {
-		background: #F6700E !important;
+		background: #438b3b !important;
 		border-color: #EF6907 !important;
 	}
 	
 	.btn-primary:active,
 	.btn-primary.active {
-		background-color: #F6700E \9 !important;
+		background-color: #438b3b \9 !important;
 	}
 	
 /*	################################################################

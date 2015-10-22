@@ -45,8 +45,6 @@ class PostTag extends Model
 		            ]);
 	        	}
 
-        		
-
 	        	// Create new post and tag relationships
 	            PostTag::create([
 	                'post_id' => $post->id,

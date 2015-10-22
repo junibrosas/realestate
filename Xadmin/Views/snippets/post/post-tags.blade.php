@@ -1,6 +1,11 @@
 <!-- Tags -->
 <div class="block">
     <div class="block-header bg-gray-lighter">
+        <ul class="block-options">
+            <li>
+                <a href="#"><i class="si si-note"></i> Manage</a>
+            </li>
+        </ul>
         <h3 class="block-title">{{ trans('admin.tags.title') }}</h3>
     </div>
     <div class="block-content">

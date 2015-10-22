@@ -25,13 +25,11 @@
 
                 @include('cms::snippets.post.post-property')
 
-                
-
                 @include('cms::snippets.post.post-geocomplete')
                 
             </div>
             <div class="col-lg-4">
-                @include('cms::snippets.post.post-category')
+                {{-- @include('cms::snippets.post.post-category') --}}
 
                 @include('cms::snippets.post.post-tags')
 

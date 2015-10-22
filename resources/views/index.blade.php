@@ -164,73 +164,7 @@
         </div>
 	</section><!-- end mapandslider -->
 
-    <section class="generalwrapper dm-shadow clearfix">
-    	<div class="container">
-			<div class="row text-center">
-				<h3 class="big_title">To attain your dream home <small>You need to do is very simple. Just join us </small></h3>
-                <div class="services_section clearfix">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="servicebox first">
-                            <div class="service-icon">
-                                <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                                    <a href="#" class=""> <i class="hovicon effect-1 sub-a fa fa-list fa-2x"></i> </a>
-                                </div>
-                            </div>
-                            <div class="servicetitle">
-                                <h3>List on the same day</h3>
-                            </div>
-                            <p>Lorem Ipsum is simply dummy Lorem Ipsum has been the industry's standard dummy text..</p>
-                        </div>
-                    </div>
-                                            
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="servicebox">
-                            <div class="service-icon">
-                                <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                                    <a href="#" class=""> <i class="hovicon effect-1 sub-a fa fa-eye-slash fa-2x"></i> </a>
-                                </div>
-                            </div>
-                            <div class="servicetitle">
-                                <h3>Detailed Agent Panel</h3>
-                            </div>
-                            <p>Lorem Ipsum is simply dummy Lorem Ipsum has been the industry's standard dummy text..</p>
-                        </div>
-                    </div>
-                                                    
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="servicebox">
-                            <div class="service-icon">
-                                <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                                    <a href="#" class=""> <i class="hovicon effect-1 sub-a fa fa-check-square-o fa-2x"></i> </a>
-                                </div>
-                            </div>
-                            <div class="servicetitle">
-                                <h3>Easy to Use</h3>
-                            </div>
-                            <p>Lorem Ipsum is simply dummy Lorem Ipsum has been the industry's standard dummy text..</p>
-                        </div>
-                    </div>
-                                                                
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="servicebox last">
-                            <div class="service-icon">
-                                <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                                    <a href="#" class=""> <i class="hovicon effect-1 sub-a fa fa-home fa-2x"></i> </a>
-                                </div>
-                            </div>
-                            <div class="servicetitle">
-                                <h3>Sell & Make Money online</h3>
-                            </div>
-                            <p>Lorem Ipsum is simply dummy Lorem Ipsum has been the industry's standard dummy text..</p>
-                        </div>
-                    </div>
-                </div><!-- services_section -->  
-            </div><!-- end row -->
-                <div class="text-center clearfix">
-                	<a class="btn btn-primary" href="#">VIEW ALL SERVICES</a>
-                </div><!-- end text-center -->
-        </div><!-- end container -->
-	</section><!-- end generalwrapper -->
+   
 
 	<section id="three-parallax" class="parallax" style="background-image: url('{{ asset('realestate/demos/02_parallax.jpg') }}');" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
         <div class="threewrapper">
@@ -238,7 +172,7 @@
                 <div class="container">
                 	<div class="row">
                     	<div class="text-center clearfix">
-							<h3 class="big_title">Most Popular Properties <small>This week's most admired properties </small></h3>
+							<h3 class="big_title">Featured Properties <small>This week's most admired properties </small></h3>
                         </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                 <div class="boxes first" data-effect="slide-bottom">
@@ -509,11 +443,11 @@
             	<div class="col-lg-7 col-md-9 col-sm-9 col-xs-12 clearfix">
                     <div id="tabbed_widget" class="tabbable clearfix" data-effect="slide-bottom"> 
                       <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab" data-toggle="tab">Family House</a></li>
-                        <li><a href="#tab2" data-toggle="tab">Land</a></li>
-                        <li><a href="#tab3" data-toggle="tab">Apartment</a></li>
-                        <li><a href="#tab4" data-toggle="tab">Cottage</a></li>
-                        <li><a href="#tab5" data-toggle="tab">Condo</a></li>
+                        <li class="active"><a href="#tab" data-toggle="tab">Hotel</a></li>
+                        <li><a href="#tab2" data-toggle="tab">Apartment/Flat</a></li>
+                        <li><a href="#tab3" data-toggle="tab">Villa</a></li>
+                        <li><a href="#tab4" data-toggle="tab">Commercial</a></li>
+                        <li><a href="#tab5" data-toggle="tab">Land</a></li>
                       </ul>
                       <div class="tab-content tabbed_widget clearfix">
                         <div class="tab-pane active" id="tab">
@@ -1340,52 +1274,7 @@
 					</div> <!-- widget -->  
 				</div><!-- end col-lg-7 -->
 
-					<div class="col-lg-3 col-md-6 col-sm-9 col-xs-12 last clearfix">
-                	<div class="widget clearfix">
-                    	<div class="agents_widget">
-                        	<div class="title"><h3><i class="fa fa-users"></i> Our Agents</h3></div>
-							<div class="agent boxes clearfix" data-effect="slide-right">
-                                <div class="image">
-                                	<img class="img-circle img-responsive img-thumbnail" src="{{ asset('realestate/demos/01_team.png') }}" alt="">
-                                </div><!-- image -->
-                                <div class="agent_desc">
-                                	<h3 class="title">Mustapha COLLIENS</h3>
-									<p><span><i class="fa fa-envelope"></i> info@yoursite.com</span></p>
-                                    <p><span><i class="fa fa-phone-square"></i> +90 333 444 55 66</span></p>
-                                </div><!-- agento desc -->
-							</div>
-							<div class="agent boxes clearfix" data-effect="slide-right">
-                                <div class="image">
-                                	<img class="img-circle img-responsive img-thumbnail" src="{{ asset('realestate/demos/02_team.png') }}" alt="">
-                                </div><!-- image -->
-                                <div class="agent_desc">
-                                	<h3 class="title">Stephania JOHNSON</h3>
-									<p><span><i class="fa fa-envelope"></i> info@yoursite.com</span></p>
-                                    <p><span><i class="fa fa-phone-square"></i> +90 333 444 55 66</span></p>
-                                </div><!-- agento desc -->
-							</div>
-							<div class="agent boxes clearfix" data-effect="slide-right">
-                                <div class="image">
-                                	<img class="img-circle img-responsive img-thumbnail" src="{{ asset('realestate/demos/03_team.png') }}" alt="">
-                                </div><!-- image -->
-                                <div class="agent_desc">
-                                	<h3 class="title">Mark ANTHONY</h3>
-									<p><span><i class="fa fa-envelope"></i> info@yoursite.com</span></p>
-                                    <p><span><i class="fa fa-phone-square"></i> +90 333 444 55 66</span></p>
-                                </div><!-- agento desc -->
-							</div>     
-							<div class="agent boxes clearfix" data-effect="slide-right">
-                                <div class="image">
-                                	<img class="img-circle img-responsive img-thumbnail" src="{{ asset('realestate/demos/04_team.png') }}" alt="">
-                                </div><!-- image -->
-                                <div class="agent_desc">
-                                	<h3 class="title">Jenny ANTHONY</h3>
-									<p><span><i class="fa fa-envelope"></i> info@yoursite.com</span></p>
-                                    <p><span><i class="fa fa-phone-square"></i> +90 333 444 55 66</span></p>
-                                </div><!-- agento desc -->
-							</div>                          
-                        </div><!-- end of agents_widget -->
-					</div><!-- end of widget -->
+				<div class="col-lg-3 col-md-6 col-sm-9 col-xs-12 last clearfix">
                  	<div class="widget text-center clearfix">
 						<img data-effect="fade" class="img-thumbnail img-responsive" src="{{ asset('realestate/demos/01_banner.png') }}" alt="">
 					</div><!-- end of widget -->  
@@ -1393,64 +1282,6 @@
 			</div><!-- end row -->
         </div><!-- end dm_container -->  
     </section><!-- end generalwrapper -->
-
-	<section id="two-parallax" class="parallax" style="background-image: url('{{ asset('realestate/demos/03_parallax.jpg') }}');" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
-        <div class="threewrapper">
-            <div class="overlay1 dm-shadow">
-                <div class="container">
-                	<div class="row">
-                    	<div class="text-center clearfix">
-                        	<h3 class="big_title">Testimonials <small>Hundred thousand happy customers over 5 year </small></h3>
-                        </div><!-- text-center -->
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <div class="boxes testimonial_widget text-right first" data-effect="slide-left">
-                                <div class="image">
-                                	<img class="img-circle img-responsive img-thumbnail" alt="" src="{{ asset('realestate/demos/03_team.png') }}">
-                                </div>
-                                <div class="testimonial_desc">
-                                <h3 class="title">Mark ANTHONY</h3>
-                                <p><i class="fa fa-quote-left"></i> Gehad van wijzigingen in een of andere vorm, door ingevoegde humor of willekeurig gekozen woorden die nog niet half geloofwaardig ogen.. <i class="fa fa-quote-right"></i></p>
-                                </div>
-							</div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <div class="boxes testimonial_widget text-left last" data-effect="slide-right">
-                                <div class="image">
-                                	<img class="img-circle img-responsive img-thumbnail" alt="" src="{{ asset('realestate/demos/02_team.png') }}">
-                                </div>
-                                <div class="testimonial_desc">
-                                <h3 class="title">Sandra ROBERTS</h3>
-                                <p><span><i class="fa fa-quote-left"></i></span> Vele variaties van passages van Lorem Ipsum beschikbaar maar het merendeel heeft te lijden gehad van wijzigingen in een of andere vorm, door ingevoegde humor of willekeurig gekozen woorden die nog niet half geloofwaardig ogen. <i class="fa fa-quote-right"></i></p>
-                                </div>
-							</div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <div class="boxes testimonial_widget text-right first" data-effect="slide-left">
-                                <div class="image">
-                                	<img class="img-circle img-responsive img-thumbnail" alt="" src="{{ asset('realestate/demos/04_team.png') }}">
-                                </div>
-                                <div class="testimonial_desc">
-                                <h3 class="title">Amy JOHNSON</h3>
-                                <p><i class="fa fa-quote-left"></i> Lorem ipsum dehad van wijzigingen in een of andere vorm, door ingevoegde humor of willekeurig gekozen woorden die nog niet half ogen.. <i class="fa fa-quote-right"></i></p>
-                                </div>
-							</div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <div class="boxes testimonial_widget text-left last" data-effect="slide-right">
-                                <div class="image">
-                                	<img class="img-circle img-responsive img-thumbnail" alt="" src="{{ asset('realestate/demos/01_team.png') }}">
-                                </div>
-                                <div class="testimonial_desc">
-                                <h3 class="title">Robert PIRSON</h3>
-                                <p><span><i class="fa fa-quote-left"></i></span> Vele variaties van passages van Lorem Ipsum beschikbaar maa, door ingevoegde humor of willekeurig gekozen woorden die nog niet half geloofwaardig ogen. <i class="fa fa-quote-right"></i></p>
-                                </div>
-							</div>
-                        </div>
-                    </div><!-- end row -->
-                </div><!-- end container -->
-            </div><!-- end overlay1 -->
-        </div><!-- end threewrapper -->
-    </section><!-- end parallax -->
     
     <section class="secondwrapper dm-shadow clearfix">
     	<div class="container">       
@@ -1590,115 +1421,6 @@
 			</div><!-- end row -->
         </div><!-- end dm_container -->  
     </section><!-- end secondwrapper -->
-
-    <section id="four-parallax" class="parallax" style="background-image: url('{{ asset('realestate/demos/04_parallax.jpg') }}');" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
-        <div class="overlay1 dm-shadow">
-        	<div class="container">
-            	<div class="row">
-                    <div class="text-center clearfix">
-                        <h3 class="big_title">Agencies <small>Some real estate agencies working with us</small></h3>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="boxes agencies_widget first" data-effect="slide-bottom"> 
-                            <div class="col-lg-3">
-                                <div class="image">
-                                    <img class="img-responsive img-thumbnail" src="{{ asset('realestate/demos/agencies_logo.png') }}" alt="">
-                                </div><!-- end agencies img -->
-                            </div>
-                            <div class="col-lg-9">
-                                <div class="agencies_desc">
-                                    <h3 class="title">NYC Real Estate Group</h3>
-                                    <p>Vele variaties van passages van Lorem Ipsum beschikbaar maar het merendeel heeft te lijden gehad van wijzigingen in een of andere vorm...</p>
-                                    <a href="#" class="btn btn-primary btn-sm">About Agencie</a> <a href="#" class="btn btn-primary btn-sm">Assigned Properties</a>
-                                    
-                                </div><!-- agencies_desc -->
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="agencies_meta">
-                                <span><i class="fa fa-envelope"></i> <a href="mailto:support@sitename.com">support@sitename.com</a></span>
-                                <span><i class="fa fa-link"></i> <a href="#">www.sitename.com</a></span>
-                                <span><i class="fa fa-phone-square"></i> +1 232 444 55 66</span>
-                            </div><!-- end agencies_meta -->
-                        </div><!-- end boxes -->
-                    </div><!-- end col-6 -->
-                    
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" data-effect="slide-bottom">
-                        <div class="boxes agencies_widget last">
-                            <div class="col-lg-3">
-                                <div class="image">
-                                    <img class="img-responsive img-thumbnail" src="{{ asset('realestate/demos/agencies_logo.png') }}" alt="">
-                                </div><!-- end agencies img -->
-                            </div>
-                            <div class="col-lg-9">
-                                <div class="agencies_desc">
-                                    <h3 class="title">Istanbul Real Estate</h3>
-                                    <p>Vele variaties van passages van Lorem Ipsum beschikbaar maar het merendeel heeft te lijden gehad van wijzigingen in een of andere vorm...</p>
-                                    <a href="#" class="btn btn-primary btn-sm">About Agencie</a> <a href="#" class="btn btn-primary btn-sm">Assigned Properties</a>
-                                    
-                                </div><!-- agencies_desc -->
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="agencies_meta">
-                                <span><i class="fa fa-envelope"></i> <a href="mailto:support@sitename.com">support@sitename.com</a></span>
-                                <span><i class="fa fa-link"></i> <a href="#">www.sitename.com</a></span>
-                                <span><i class="fa fa-phone-square"></i> +1 232 444 55 66</span>
-                            </div><!-- end agencies_meta -->
-                        </div><!-- end boxes -->
-                    </div><!-- end col-6 -->
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="boxes agencies_widget first" data-effect="slide-bottom"> 
-                            <div class="col-lg-3">
-                                <div class="image">
-                                    <img class="img-responsive img-thumbnail" src="{{ asset('realestate/demos/agencies_logo.png') }}" alt="">
-                                </div><!-- end agencies img -->
-                            </div>
-                            <div class="col-lg-9">
-                                <div class="agencies_desc">
-                                    <h3 class="title">Madrid Real Estate Company INC.</h3>
-                                    <p>Vele variaties van passages van Lorem Ipsum beschikbaar maar het merendeel heeft te lijden gehad van wijzigingen in een of andere vorm...</p>
-                                    <a href="#" class="btn btn-primary btn-sm">About Agencie</a> <a href="#" class="btn btn-primary btn-sm">Assigned Properties</a>
-                                    
-                                </div><!-- agencies_desc -->
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="agencies_meta">
-                                <span><i class="fa fa-envelope"></i> <a href="mailto:support@sitename.com">support@sitename.com</a></span>
-                                <span><i class="fa fa-link"></i> <a href="#">www.sitename.com</a></span>
-                                <span><i class="fa fa-phone-square"></i> +1 232 444 55 66</span>
-                            </div><!-- end agencies_meta -->
-                        </div><!-- end boxes -->
-                    </div><!-- end col-6 -->
-                    
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" data-effect="slide-bottom">
-                        <div class="boxes agencies_widget last">
-                            <div class="col-lg-3">
-                                <div class="image">
-                                    <img class="img-responsive img-thumbnail" src="{{ asset('realestate/demos/agencies_logo.png') }}" alt="">
-                                </div><!-- end agencies img -->
-                            </div>
-                            <div class="col-lg-9">
-                                <div class="agencies_desc">
-                                    <h3 class="title">Amsterdam Real Estate Group</h3>
-                                    <p>Vele variaties van passages van Lorem Ipsum beschikbaar maar het merendeel heeft te lijden gehad van wijzigingen in een of andere vorm...</p>
-                                    <a href="#" class="btn btn-primary btn-sm">About Agencie</a> <a href="#" class="btn btn-primary btn-sm">Assigned Properties</a>
-                                    
-                                </div><!-- agencies_desc -->
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="agencies_meta">
-                                <span><i class="fa fa-envelope"></i> <a href="mailto:support@sitename.com">support@sitename.com</a></span>
-                                <span><i class="fa fa-link"></i> <a href="#">www.sitename.com</a></span>
-                                <span><i class="fa fa-phone-square"></i> +1 232 444 55 66</span>
-                            </div><!-- end agencies_meta -->
-                        </div><!-- end boxes -->
-                    </div><!-- end col-6 -->
-          		</div><!-- end row -->
-                <div class="text-center clearfix">
-                	<a class="btn btn-primary" href="agencies.html">VIEW ALL AGENCIES</a>
-                </div><!-- end text-center -->
-        	</div><!-- end dm_container -->
-        </div><!-- end overlay -->
-    </section>  
         
     <section class="message_banner dm-shadow">
     	<div class="container">

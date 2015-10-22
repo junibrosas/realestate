@@ -22,3 +22,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Xadmin\Controllers'], functio
     Route::post('login', ['as' => 'auth.login', 'uses' => 'AuthController@postLogin']);
     Route::get('logout', ['as' => 'auth.logout', 'uses' => 'AuthController@getLogout']);
 });
+
+Route::get('test', function(){
+    $data = array(
+        'name' => 'Juni Brosas',
+        'girlfriend' => 'Jayde Brosas'
+    );
+    \Xadmin\Models\PostMeta::updateBundle(24, $data);
+});

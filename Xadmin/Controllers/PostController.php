@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Xadmin\Models\Post;
 use Xadmin\Models\PostTag;
 use Xadmin\Models\FileMedia;
+use Xadmin\Models\PostMeta;
 
 class PostController extends Controller
 {
@@ -40,6 +41,9 @@ class PostController extends Controller
 
         // Save new tags
         PostTag::saveTags( $request->get('tags'), $post );
+
+        // Save new post meta
+        PostMeta::saveBundle( $post->id, $request->get('meta') );
 
         //instaFlash('Successfully Published!', 'Yes! your post is published!');
 
@@ -78,6 +82,9 @@ class PostController extends Controller
 
         // Save new tags
         PostTag::saveTags( $request->get('tags'), $post );
+
+        // Save new post meta
+        PostMeta::saveBundle( $post->id, $request->get('meta') );
 
         return redirect()->back()->withInput();
     }

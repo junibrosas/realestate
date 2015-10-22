@@ -1,6 +1,7 @@
 <?php
 use Xadmin\Models\Post;
 use Xadmin\Models\PostTag;
+use Xadmin\Models\PostMeta;
 
 $GLOBALS['statuses'] = array( 0 => 'hidden', 1 => 'published' );
 
@@ -81,4 +82,34 @@ if ( ! function_exists('_postStatus'))
     }
 }
 
+// Return post meta by specifying meta key
+if ( ! function_exists('_postMeta'))
+{
+    function _postMeta( $postId, $key )
+    {
+
+        if(!$postId) return;
+
+        // if the key has a json decoded string, 
+        // iterate each item and match it to the value.
+        if(is_array($key)){
+            $meta = PostMeta::where('post_id', $postId)->where('meta_key', $key['meta_key'])->first();
+            $metaValueJsonDecode = json_decode($meta->meta_value);
+            if(count($metaValueJsonDecode) > 0){
+                foreach($metaValueJsonDecode as $itemKey => $itemValue){
+
+                    if($key['meta_value'] == $itemKey){
+                        return $itemValue;
+                    } 
+                }
+            }
+        }
+
+        $meta = PostMeta::where('post_id', $postId)->where('meta_key', $key)->first();
+
+        if(!$meta) return;
+
+        return $meta->meta_value;
+    }
+}
 
