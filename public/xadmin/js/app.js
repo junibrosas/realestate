@@ -815,7 +815,7 @@ var App = function() {
 
         // Init full text editor
         jQuery('.js-summernote').summernote({
-            height: 350,
+            height: 200,
             minHeight: null,
             maxHeight: null
         });

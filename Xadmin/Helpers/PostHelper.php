@@ -1,6 +1,6 @@
 <?php
-use Xadmin\Features\CMS\Models\Post;
-use Xadmin\Features\CMS\Models\PostTag;
+use Xadmin\Models\Post;
+use Xadmin\Models\PostTag;
 
 $GLOBALS['statuses'] = array( 0 => 'hidden', 1 => 'published' );
 

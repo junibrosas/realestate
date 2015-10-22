@@ -1,9 +1,9 @@
 <?php
 // Admin routes
-Route::group(['prefix' => 'admin', 'middleware' => 'admin-auth', 'namespace' => 'Xadmin\Features\CMS\Controllers'], function()
+Route::group(['prefix' => 'admin', 'middleware' => 'admin-auth', 'namespace' => 'Xadmin\Controllers'], function()
 {
 	Route::get('/', ['as' => 'admin.root', 'uses' => 'DashboardController@index']); // 'root' is route name used to make the application index url separate from the rest of the pages and routes.
-	Route::resource('pages', 'PageController');
+    Route::resource('pages', 'PageController');
     Route::resource('posts', 'PostController');
     Route::resource('files', 'FileController');
     Route::resource('menu', 'MenuController');
@@ -15,7 +15,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin-auth', 'namespace' => 
 });
 
 // Admin Public Routes
-Route::group(['prefix' => 'admin', 'namespace' => 'Xadmin\Features\CMS\Controllers'], function()
+Route::group(['prefix' => 'admin', 'namespace' => 'Xadmin\Controllers'], function()
 {
 	// Authentication
     Route::get('login',  ['as' => 'auth.login', 'uses' => 'AuthController@getLogin']);

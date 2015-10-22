@@ -1,5 +1,5 @@
 <?php
-use Xadmin\Features\CMS\Models\FileMedia;
+use Xadmin\Models\FileMedia;
 
 // Return the preview of filemedia in a post
 if(! function_exists('_fileMediaPreview'))

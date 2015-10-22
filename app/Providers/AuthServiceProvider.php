@@ -25,7 +25,7 @@ class AuthServiceProvider extends ServiceProvider
     }
 
     public function getPermissions(){
-        return \Xadmin\Features\CMS\Models\Permission::with('roles')->get();
+        return \Xadmin\Models\Permission::with('roles')->get();
     }
 
 }

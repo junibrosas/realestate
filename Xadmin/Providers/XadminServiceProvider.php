@@ -19,7 +19,7 @@ class XadminServiceProvider extends ServiceProvider
         include_once  __DIR__.'/../../Xadmin/Helpers/ProfileHelper.php';
         include __DIR__.'/../routes.php';
         
-        $this->loadViewsFrom(__DIR__ . '/../Features/CMS/Views', 'cms');
+        $this->loadViewsFrom(__DIR__ . '/../Views', 'cms');
     }
 
     /**
