@@ -65,8 +65,6 @@ class PostController extends Controller
  
     public function update(Request $request, $id)
     {
-        dd($request->all());
-        
         // Find post
         $post = Post::getPosts()->where('id',$id)->first();
 
