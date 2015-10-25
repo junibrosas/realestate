@@ -268,50 +268,7 @@
                     </div><!-- end search_widget -->
                 </div><!-- end widget -->
 
-            	<div class="widget clearfix">
-                	<div class="agents_widget">
-                    	<div class="title"><h3><i class="fa fa-users"></i> Our Agents</h3></div>
-						<div class="agent boxes clearfix">
-                            <div class="image">
-                            	<img class="img-circle img-responsive img-thumbnail" src="{{ asset('realestate/demos/01_team.png') }}" alt="">
-                            </div><!-- image -->
-                            <div class="agent_desc">
-                            	<h3 class="title">Mustapha COLLIENS</h3>
-								<p><span><i class="fa fa-envelope"></i> info@yoursite.com</span></p>
-                                <p><span><i class="fa fa-phone-square"></i> +90 333 444 55 66</span></p>
-                            </div><!-- agento desc -->
-						</div>
-						<div class="agent boxes clearfix">
-                            <div class="image">
-                            	<img class="img-circle img-responsive img-thumbnail" src="{{ asset('realestate/demos/02_team.png') }}" alt="">
-                            </div><!-- image -->
-                            <div class="agent_desc">
-                            	<h3 class="title">Stephania JOHNSON</h3>
-								<p><span><i class="fa fa-envelope"></i> info@yoursite.com</span></p>
-                                <p><span><i class="fa fa-phone-square"></i> +90 333 444 55 66</span></p>
-                            </div><!-- agento desc -->
-						</div>
-						<div class="agent boxes clearfix">
-                            <div class="image">
-                            	<img class="img-circle img-responsive img-thumbnail" src="{{ asset('realestate/demos/03_team.png') }}" alt="">
-                            </div><!-- image -->
-                            <div class="agent_desc">
-                            	<h3 class="title">Mark ANTHONY</h3>
-								<p><span><i class="fa fa-envelope"></i> info@yoursite.com</span></p>
-                                <p><span><i class="fa fa-phone-square"></i> +90 333 444 55 66</span></p>
-                            </div><!-- agento desc -->
-						</div>     
-						<div class="agent boxes clearfix">
-                            <div class="image">
-                            	<img class="img-circle img-responsive img-thumbnail" src="{{ asset('realestate/demos/04_team.png') }}" alt="">
-                            </div><!-- image -->
-                            <div class="agent_desc">
-                            	<h3 class="title">Jenny ANTHONY</h3>
-								<p><span><i class="fa fa-envelope"></i> info@yoursite.com</span></p>
-                                <p><span><i class="fa fa-phone-square"></i> +90 333 444 55 66</span></p>
-                            </div><!-- agento desc -->
-						</div>                          
-                    </div><!-- end of agents_widget -->
+            	
 				</div><!-- end of widget -->
              	<div class="widget clearfix">
                 	<div class="title"><h3>Banner Ads</h3></div>
