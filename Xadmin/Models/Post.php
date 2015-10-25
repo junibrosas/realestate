@@ -33,7 +33,7 @@ class Post extends Model
 
         $post->title = $request->get('title');
         $post->content = $request->get('content');
-        $post->slug = str_slug( $request->get('slug') );
+        $post->slug = str_slug( $request->get('title') );
         $post->meta_keywords = $request->get('title');
         $post->meta_description = $request->get('content');
         $post->is_visible = isset($isVisible);

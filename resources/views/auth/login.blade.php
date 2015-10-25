@@ -1,4 +1,4 @@
-@extends('admin.layouts.auth')
+@extends('cms::layouts.auth')
 
 
 @section('content')

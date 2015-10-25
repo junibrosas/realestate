@@ -6,8 +6,11 @@ if ( ! function_exists('_dataAmenities'))
     function _dataAmenities()
     {
         return array (
+    		['title' => 'Garage'],
+    		['title' => 'Beds'],
+			['title' => 'Baths'],
 			['title' => 'Air conditioning'],
-			['title' => 'Bedding'],
+			['title' => 'Irons'],
 			['title' => 'Heating'],
 			['title' => 'Internet'],
 			['title' => 'Microwave'],
@@ -16,14 +19,11 @@ if ( ! function_exists('_dataAmenities'))
 			['title' => 'Toaster'],
 			['title' => 'Cofee pot'],
 			['title' => 'Cable TV'],
-			['title' => 'Parquet'],
 			['title' => 'Roof terrace'],
 			['title' => 'Terrace'],
 			['title' => 'Towelwes'],
-			['title' => 'Iron'],
 			['title' => 'Hi-Fi'],
 			['title' => 'Beach'],
-			['title' => 'Garage'],
 			['title' => 'Child Room'],
 			['title' => 'Drawing room'],
 			['title' => 'Security'],

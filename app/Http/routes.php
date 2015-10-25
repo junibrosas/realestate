@@ -16,9 +16,15 @@ use App\Events\FileWasUploaded;
 */
 // Auth routes
 
-Route::get('/', ['as' => 'front.home', 'uses' => 'FrontController@index']);
+
 Route::get('properties', ['as' => 'front.properties', 'uses' => 'FrontController@properties']);
 Route::get('property', ['as' => 'front.property', 'uses' => 'FrontController@property']);
+
+// Errors
+Route::group(['prefix' => 'error'], function()
+{
+    Route::get('404', ['as' => 'front.error-404', 'uses' => 'ErrorController@error404']);
+});
 
 Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function()
 {
@@ -28,6 +34,9 @@ Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function()
     Route::post('login', ['as' => 'auth.login', 'uses' => 'AuthController@postLogin']);
     Route::get('logout', ['as' => 'auth.logout', 'uses' => 'AuthController@getLogout']);  
 });
+
+// This route should be the last routing to implement.
+Route::get('/{slug?}', ['as' => 'front.index', 'uses' => 'FrontController@index']);
 
 get('file-upload', function(){
     event(new FileWasUploaded('Hello Jayde!'));

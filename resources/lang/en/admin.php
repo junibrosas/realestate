@@ -14,7 +14,7 @@ return [
     */
 
     'root' => 'Dashboard',
-    'menu' 	=> [
+    'menu'  => [
         'index' => 'Menu'
     ],    
     'files' => [
@@ -32,11 +32,10 @@ return [
         'index' => 'Posts', 
         'create' => 'Create Post',
         'add' => 'Add New Post',
-        'edit' => 'Edit Blog Post',
-        'store' => 'Save Post',
-        'blog_title' => 'Post Title',
-        'blog_content' => 'Post Content'
-        
+        'edit' => 'Edit Post',
+        'store' => 'Save',
+        'blog_title' => 'Title',
+        'blog_content' => 'Content'       
     ],
     'pages' => [
         'all' => 'All Pages',  
@@ -44,9 +43,9 @@ return [
         'create' => 'Create Page',
         'add' => 'Add New Page',
         'edit' => 'Edit Page',
-        'store' => 'Save Page',
-        'blog_title' => 'Page Title',
-        'blog_content' => 'Page Content'
+        'store' => 'Save',
+        'blog_title' => 'Title',
+        'blog_content' => 'Content'
     ],
 
     'auth' => [
@@ -66,5 +65,16 @@ return [
     ],
     'post-media' => [
         'index' => 'Add Media Files'
-    ]
+    ],
+    'post_category' => 'Post Category',
+    'properties' => 'Properties',
+    'geocomplete_title' => 'Location Search',
+    'property_details' => 'Property Details',
+    'property_area' => 'Area (m2)',
+    'property_address' => 'Address',
+    'property_price' => 'Price',
+    'property_type' => 'Type',
+    'property_status' => 'Status',
+    'property_country' => 'Country',
+    'property_location' => 'Location'
 ];

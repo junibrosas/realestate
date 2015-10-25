@@ -95,3 +95,12 @@ if ( ! function_exists('_buildMenu')){
         echo '</ol>';
     }
 }
+
+if ( ! function_exists('_money')){
+    function _money($amount, $symbol = '$')
+    {
+        return $symbol . money_format('%i', $amount);
+    }
+}
+
+

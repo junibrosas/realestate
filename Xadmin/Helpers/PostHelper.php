@@ -11,7 +11,7 @@ if ( ! function_exists('_postPermaLink'))
     function _postPermaLink( Post $post )
     {
         $post = Post::find($post->id);
-        return $post->id;
+        return url('/'.$post->slug);
     }
 }
 

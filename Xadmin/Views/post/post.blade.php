@@ -11,6 +11,7 @@
         {!! csrf_field() !!}
         <div class="pull-left page-block-btns"> 
             <a href="{{ route('admin.posts.index') }}" class="btn btn-primary btn-square"><i class="fa fa-list"></i> {{ trans('admin.posts.all') }}</a>
+            <a href="{{ route('admin.posts.create') }}" class="btn btn-primary btn-square"><i class="fa fa-plus"></i> {{ trans('admin.posts.add') }}</a>
         </div>
         <div class="pull-right page-block-btns"> 
             <button type="submit" class="btn btn-primary btn-square"><i class="fa fa-floppy-o"></i> {{ trans('admin.posts.store') }}</a>
