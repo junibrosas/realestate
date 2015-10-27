@@ -20,10 +20,7 @@ class FrontController extends Controller
     }
 
     public function properties(){
-        return view('properties');
-    }
-
-    public function property(){
-        return view('property');
+        $properties = Post::getPosts()->paginate( config('front.postPerPage') );
+        return view('properties', compact('properties'));
     }
 }

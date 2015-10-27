@@ -101,11 +101,11 @@
             </div><!-- end col-lg-6 -->
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="marketing">
-                    <ul class="topflags pull-right">
+                    {{-- <ul class="topflags pull-right">
                         <li><a data-placement="bottom" data-toggle="tooltip" data-original-title="German" title="" href="#"><img alt="de" src="{{ asset('realestate/images/flags/de.png') }}"></a></li>
                         <li><a data-placement="bottom" data-toggle="tooltip" data-original-title="Turkish" title="" href="#"><img alt="tr" src="{{ asset('realestate/images/flags/tr.png') }}"></a></li>
                         <li><a data-placement="bottom" data-toggle="tooltip" data-original-title="Geek" title="" href="#"><img alt="gr" src="{{ asset('realestate/images/flags/gr.png') }}"></a></li>
-                    </ul><!-- end flags -->
+                    </ul> --}}
                     <ul class="topmenu pull-right">
                         <li><a href="{{ url('auth/login') }}"><i class="fa fa-lock"></i> Login / Register</a></li>
                     </ul><!-- topmenu -->

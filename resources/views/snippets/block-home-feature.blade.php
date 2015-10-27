@@ -1,21 +1,18 @@
 @forelse( $properties as $post )
-<?php 
-$title = _postTitle( $post );
-$address = _postMeta( $post->id, 'address' );
-$area = _postMeta($post->id, 'area');
-$garage = _postMeta($post->id, ['meta_key'=>'amenities', 'meta_value' => 'Garage']);
-$beds = _postMeta($post->id, ['meta_key'=>'amenities', 'meta_value' => 'Beds']);
-$baths = _postMeta($post->id, ['meta_key'=>'amenities', 'meta_value' => 'Baths']);
-$price = _money( _postMeta( $post->id, 'price' ) );
-$url = _postPermaLink( $post );
-?>
+
+{{-- Traditionally include the variable file so that it could be shared to this view --}}
+<?php include base_path() .'/resources/views/snippets/variables-property.blade.php'; ?>
+
+
 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
     <div class="boxes first" data-effect="slide-bottom">
         <div class="ImageWrapper boxes_img">
-            <img class="img-responsive" src="{{ asset('realestate/demos/01_home.jpg') }}" alt="">
+            
+            {!! $featureImage !!}
+            
             <div class="ImageOverlayH"></div>
             <div class="Buttons StyleSc">
-                <span class="WhiteSquare"><a class="fancybox" href="{{ asset('realestate/demos/01_home.jpg') }}"><i class="fa fa-search"></i></a>
+                <span class="WhiteSquare"><a class="fancybox" href="{{ $featureImageSource }}k"><i class="fa fa-search"></i></a>
                 </span>
                 <span class="WhiteSquare"><a href="{{ $url }}"><i class="fa fa-link"></i></a>
                 </span>

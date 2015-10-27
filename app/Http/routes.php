@@ -14,11 +14,13 @@ use App\Events\FileWasUploaded;
 | and give it the controller to call when that URI is requested.
 |
 */
-// Auth routes
 
+// Admin Routes
+//require_once app_path().'/Xadmin/routes.php';
+
+include( base_path().'/Xadmin/routes.php' );
 
 Route::get('properties', ['as' => 'front.properties', 'uses' => 'FrontController@properties']);
-Route::get('property', ['as' => 'front.property', 'uses' => 'FrontController@property']);
 
 // Errors
 Route::group(['prefix' => 'error'], function()
@@ -26,6 +28,8 @@ Route::group(['prefix' => 'error'], function()
     Route::get('404', ['as' => 'front.error-404', 'uses' => 'ErrorController@error404']);
 });
 
+
+// Auth routes
 Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function()
 {
   	// Authentication

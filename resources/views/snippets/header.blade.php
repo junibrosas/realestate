@@ -50,13 +50,6 @@
                         @endforeach
                     </ul>
 
-                    {{-- <ul class="nav navbar-nav">
-
-                        <li class="dropdown fhmm-fw active"><a href="{{ route('front.index') }}"><i class="fa fa-home"></i> HOME</a></li><!-- mega menu -->
-
-                        <li class="dropdown fhmm-fw"><a href="{{ route('front.properties') }}">PROPERTIES</a></li><!-- mega menu -->
-                        
-                    </ul> --}}<!-- end nav navbar-nav -->
                 </div><!-- end #navbar-collapse-1 -->
              </div><!-- end dm_container -->
         </nav><!-- end navbar navbar-default fhmm -->

@@ -10,7 +10,7 @@ if ( ! function_exists('_postPermaLink'))
 {
     function _postPermaLink( Post $post )
     {
-        $post = Post::find($post->id);
+        //$post = Post::find($post->id);
         return url('/'.$post->slug);
     }
 }
@@ -24,7 +24,7 @@ if ( ! function_exists('_postEditLink'))
         if ($post->post_type == 'post') $seg = 'posts';
         if ($post->post_type == 'page') $seg = 'pages';
 
-        $post = Post::find($post->id);
+        //$post = Post::find($post->id);
         return route('admin.'.$seg.'.edit', $post->id);
     }
 }
@@ -34,7 +34,7 @@ if ( ! function_exists('_postTitle'))
 {
     function _postTitle( Post $post )
     {
-        $post = Post::find($post->id);
+        //$post = Post::find($post->id);
         return $post->title;
     }
 }
@@ -67,7 +67,19 @@ if ( ! function_exists('_postFeatureImage'))
     function _postFeatureImage( Post $post )
     {
         if($post->featureImage())   
-            return '<img src="'.$post->featureImage().'" alt="'._postTitle($post).'" class="post-feature-image">';
+            return '<img src="'.$post->featureImage().'" alt="'._postTitle($post).'" class="post-feature-image img-responsive">';
+
+        return false;
+    }
+}
+
+// Return the post feature image
+if ( ! function_exists('_postFeatureImageSource'))
+{
+    function _postFeaturEImageSource( Post $post )
+    {
+        if($post->featureImage())   
+            return $post->featureImage();
 
         return false;
     }
@@ -110,6 +122,20 @@ if ( ! function_exists('_postMeta'))
         if(!$meta) return;
 
         return $meta->meta_value;
+    }
+}
+
+// Return post description content
+if ( ! function_exists('_postContent')){
+    function _postContent( $post ){
+        return $post->content;
+    }
+}
+
+// Return post excerpt, limited content
+if ( ! function_exists('_postExcerpt')){
+    function _postExcerpt( $post, $limit = 0 ){
+        return substr($post->content, 0, $limit);
     }
 }
 

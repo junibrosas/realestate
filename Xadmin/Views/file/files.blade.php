@@ -16,12 +16,12 @@
 @stop
 
 @section('header')
-	<link rel="stylesheet" href="{{ asset('js/plugins/dropzonejs/dropzone.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('xadmin/js/plugins/dropzonejs/dropzone.min.css') }}">
 @stop
 
 
 @section('footer')
-	<script src="{{ asset('js/plugins/dropzonejs/dropzone.min.js') }}"></script>
+	<script src="{{ asset('xadmin/js/plugins/dropzonejs/dropzone.min.js') }}"></script>
 	<script type="text/javascript">
 		$(function () {
             // Init page helpers (Table Tools helper)
