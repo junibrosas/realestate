@@ -6,8 +6,10 @@
         <input name="_method" type="hidden" value="PUT">
     @else 
         <form class="form-horizontal push-10-t" action="{{ route('admin.posts.store') }}" method="POST">
+        
     @endif
-    
+        {{-- Define the Post Type --}}        
+        <input name="post_type" type="hidden" value="post">
         {!! csrf_field() !!}
         <div class="pull-left page-block-btns"> 
             <a href="{{ route('admin.posts.index') }}" class="btn btn-primary btn-square"><i class="fa fa-list"></i> {{ trans('admin.posts.all') }}</a>
@@ -30,7 +32,7 @@
                 
             </div>
             <div class="col-lg-4">
-                {{-- @include('cms::snippets.post.post-category') --}}
+                @include('cms::snippets.post.post-category')
 
                 @include('cms::snippets.post.post-tags')
 

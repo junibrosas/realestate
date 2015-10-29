@@ -47,19 +47,19 @@ return [
         'blog_title' => 'Title',
         'blog_content' => 'Content'
     ],
-
     'auth' => [
         'login' => 'Login'
     ],
-
     'categories' => [
         'title' => 'Categories'
     ],
-
     'tags' => [
-        'title' => 'Tags'
+        'index' => 'Tags',
+        'title' => 'Tags',
+        'add' => 'Add New Tag',
+        'add-block' => 'Add New Category/Tag',
+        'list' => 'List of Categories/Tags'
     ],
-
     'image' => [
         'feature' => 'Feature Image',
     ],

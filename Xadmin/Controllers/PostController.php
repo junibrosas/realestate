@@ -35,12 +35,12 @@ class PostController extends Controller
     {
         // Save new post
         $post = Post::savePost( $request );
-        
-        $post->post_type = 'post';
-        $post->save();
 
         // Save new tags
-        PostTag::saveTags( $request->get('tags'), $post );
+        PostTag::saveTags( $request->get('tags'), $post, 'tag' );
+
+        // Save new category
+        PostTag::saveBundle( $request->get('category'), $post, 'category' );
 
         // Save new post meta
         PostMeta::saveBundle( $post->id, $request->get('meta') );
@@ -81,7 +81,10 @@ class PostController extends Controller
         }
 
         // Save new tags
-        PostTag::saveTags( $request->get('tags'), $post );
+        PostTag::saveTags( $request->get('tags'), $post, 'tag' );
+        
+        // Save new category
+        PostTag::saveBundle( $request->get('category'), $post, 'category' );
 
         // Save new post meta
         PostMeta::saveBundle( $post->id, $request->get('meta') );

@@ -31,6 +31,10 @@ class MenuMiddleware
                 ->icon('si si-docs', 'si')
                 ->prependIcon();
 
+            $Tags = $menu->add( trans( 'admin.tags.index' ) , route('admin.tags.index') )
+                ->icon('si si-tag', 'si')
+                ->prependIcon();
+
             $files = $menu->add( trans('admin.files.index') , route('admin.files.index') )
                 ->icon('si si-puzzle', 'si')
                 ->prependIcon();

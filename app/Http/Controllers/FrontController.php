@@ -15,8 +15,10 @@ class FrontController extends Controller
         if($slug)
             return $this->dispatch(new \App\Jobs\Post($slug));
 
+
     	$properties = Post::getPosts()->take(8)->get();
-        return view('index', compact('properties'));
+        $categories = \Xadmin\Models\Tag::whereIn('id', [1,2,3,4,5])->with('posts')->get();
+        return view('index', compact('properties', 'categories'));
     }
 
     public function properties(){

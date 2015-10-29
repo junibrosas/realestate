@@ -12,7 +12,7 @@
             
             <div class="ImageOverlayH"></div>
             <div class="Buttons StyleSc">
-                <span class="WhiteSquare"><a class="fancybox" href="{{ $featureImageSource }}k"><i class="fa fa-search"></i></a>
+                <span class="WhiteSquare"><a class="fancybox" href="{{ $featureImageSource }}"><i class="fa fa-search"></i></a>
                 </span>
                 <span class="WhiteSquare"><a href="{{ $url }}"><i class="fa fa-link"></i></a>
                 </span>

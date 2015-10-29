@@ -8,6 +8,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin-auth', 'namespace' => 
     Route::resource('files', 'FileController');
     Route::resource('menu', 'MenuController');
     Route::resource('users', 'UserController');
+    Route::resource('tags', 'TagController');
 
     Route::get('post-media', ['as' => 'admin.post-media.index', 'uses' => 'PostController@postMedia']);
     Route::post('post-media-store', ['as' => 'admin.post-media.store', 'uses' => 'PostController@storePostMedia']);
@@ -24,9 +25,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Xadmin\Controllers'], functio
 });
 
 Route::get('test', function(){
-    $data = array(
-        'name' => 'Juni Brosas',
-        'girlfriend' => 'Jayde Brosas'
-    );
-    \Xadmin\Models\PostMeta::updateBundle(24, $data);
+    $posts = \Xadmin\Models\Post::get();
+    foreach ($posts as $key => $post) {
+        $post->slug = str_slug($post->title);
+        $post->save();
+
+    }
+
 });

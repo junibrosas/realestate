@@ -33,3 +33,13 @@ if ( ! function_exists('_dataAmenities'))
     	);
     }
 }
+// Return post url to preview post
+if ( ! function_exists('_dataTagTypes'))
+{
+	function _dataTagTypes(){
+		return [
+			'category' => 'Category',
+			'tag' => 'Tag',
+		];
+	}
+}

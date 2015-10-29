@@ -18,6 +18,7 @@ class XadminServiceProvider extends ServiceProvider
         include_once  __DIR__.'/../../Xadmin/Helpers/FileMediaHelper.php';
         include_once  __DIR__.'/../../Xadmin/Helpers/ProfileHelper.php';
         include_once  __DIR__.'/../../Xadmin/Helpers/DataHelper.php';
+        include_once  __DIR__.'/../../Xadmin/Helpers/TagHelper.php';
         include __DIR__.'/../routes.php';
         
         $this->loadViewsFrom(__DIR__ . '/../Views', 'cms');

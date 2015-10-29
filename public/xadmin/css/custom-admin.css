@@ -33,3 +33,6 @@ table .action-buttons .delete-form{
     height: 400px;
     margin: 10px 20px 10px 0;
 }
+.form-group em { margin-top: 5px; display: block;}
+.category-list .form-group { margin-bottom: 0; }
+.category-list { height: 170px;overflow: overlay;margin-bottom: 30px; }

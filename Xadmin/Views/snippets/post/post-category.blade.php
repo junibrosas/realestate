@@ -8,15 +8,26 @@
             <div class="col-md-12">
                 <div class="form-group">
 		            <label class="col-xs-12" for="example-select">Select appropriate category for your post.</label>
-		            <div class="col-sm-12">
-		                <select class="form-control" name="category" size="1">
-		                    <option value="0">Please select</option>
-		                    <option value="1">Option #1</option>
-		                    <option value="2">Option #2</option>
-		                    <option value="3">Option #3</option>
-		                </select>
-		            </div>
 		        </div>
+		        <div class="col-sm-12 category-list">
+		        	<div class="">
+		        		<?php
+			        		$categoryList = _categoryList();
+			        		unset($categoryList[0]);
+			        	?>
+			        	@forelse( $categoryList as $categoryId => $categoryName)
+			        		<div class="form-group">
+			        			<label class="css-input css-checkbox css-checkbox-default">
+				                    <input type="checkbox" name="category[]"  {{ _tagExistInPost( $post->id, $categoryId ) ? 'checked' : '' }} value="{{ $categoryId }}" ><span></span>
+				                    {{ $categoryName }} 
+				                </label>
+			                </div>
+			        	@empty
+			        		<div class="text-center">No available category</div>
+			        	@endforelse
+			        	<br/>
+		        	</div>
+	            </div>
             </div>
         </div>
     </div>
