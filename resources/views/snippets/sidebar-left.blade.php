@@ -4,7 +4,7 @@
 		<a href="#"><img src="{{ asset('realestate/demos/03_banner.png') }}" alt="" class="img-thumbnail img-responsive"></a>
     </div><!-- end widget -->
     
-	@include('snippets.block-site-links')
+	{{-- @include('snippets.block-site-links') --}}
                                    
 	@include('snippets.block-category-groups')
 

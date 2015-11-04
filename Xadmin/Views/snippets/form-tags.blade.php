@@ -36,11 +36,11 @@
             </div>
         </div>
     </div>
-    {{-- Parent --}}
+    {{-- Type --}}
     <div class="form-group">
         <label class="col-xs-12" for="example-select">Type</label>
         <div class="col-sm-12">
-            <?php $tagTypes = _dataTagTypes(); $tagTypes[0] = 'Please select'; $tagType = $tag->type ? $tag->type : 0 ?>
+            <?php $tagTypes = _dataTagTypes(); $tagTypes[0] = 'Please select'; $tagTypes = array_reverse($tagTypes); $tagType = $tag->type ? $tag->type : 0 ?>
             
             {!! Form::select('type', $tagTypes ,$tagType, ['class' => 'form-control', 'size' => 1] ) !!}
 
@@ -48,14 +48,14 @@
         </div>
     </div>
     {{-- Parent --}}
-    @if( $tag->type == 'category')
+    @if( !$tag->id || $tag->type == 'category')
         <div class="form-group">
             <label class="col-xs-12" for="example-select">Parent</label>
             <div class="col-sm-12">
                 <?php 
-                $tag->parent = $tag->parent ? $tag->parent : 0;  ?>
+                $tag->parent_id = $tag->parent_id ? $tag->parent_id : 0;  ?>
 
-                {!! Form::select('parent', _categoryList( $tags ), $tag->parent, ['class' => 'form-control', 'size' => 1] ) !!}
+                {!! Form::select('parent_id', _categoryList( $parentTags ), $tag->parent_id, ['class' => 'form-control', 'size' => 1] ) !!}
 
                 <em>Categories, unlike tags, can have a hierarchy. You might have a Jazz category, and under that have children categories for Bebop and Big Band. Totally optional.</em>
             </div>
@@ -64,7 +64,7 @@
     {{-- Submit Button --}}
 	<div class="form-group">
 		<div class="col-sm-12">
-			<button type="submit" class="btn btn-primary btn-square pull-right"><i class="fa fa-plus"></i> {{ trans('admin.tags.add') }}</button>
+			<button type="submit" class="btn btn-primary btn-square pull-right"><i class="fa fa-plus"></i> {{ trans('admin.tags.save') }}</button>
 		</div>
     </div>
 {!! Form::close() !!}

@@ -1,4 +1,5 @@
 <?php
+
 // Admin routes
 Route::group(['prefix' => 'admin', 'middleware' => 'admin-auth', 'namespace' => 'Xadmin\Controllers'], function()
 {

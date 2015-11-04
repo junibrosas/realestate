@@ -26,7 +26,7 @@
             <td>
                 {{ strtoupper($tag->type) }}
             </td>
-            <td class="text-center">{{ $tag->parent }}</td>
+            <td class="text-center">{{ $tag->parent_id }}</td>
             <td class="text-right action-buttons">
                 <a href="{{ route('admin.tags.index', ['tag' => $tag->id]) }}" class="btn btn-success push-5-r push-10" type="button"><i class="fa fa-edit"></i></a>
                 {!! Form::model($tag, ['route' => ['admin.tags.destroy', $tag->id], 'method' => 'DELETE', 'class' => 'delete-form']) !!}

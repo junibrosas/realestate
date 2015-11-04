@@ -4,7 +4,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                <div class="logo-wrapper clearfix">
 					<div class="logo">
-						<a href="index.html" title="Home">
+						<a href="{{ url() }}" title="Home">
 							<img src="{{ asset('realestate/images/logo.png') }}" alt="Estate">
 						</a>
 					</div><!-- /.site-name -->

@@ -29,21 +29,16 @@
                 </div>
             </div>
         </div>
-        {{-- Type --}}
-        <div class="form-group">
-            <label class="col-xs-12" for="example-select">{{ trans('admin.property_type') }}</label>
-            <div class="col-sm-12">
-
-                {!! Form::select('meta[property_type]', ['Option #1', 'Option #2', 'Option #3'], _postMeta($post->id, 'property_type'), ['class' => 'form-control', 'size' => 1] ) !!}
-
-            </div>
-        </div>
         {{-- Status --}}
         <div class="form-group">
             <label class="col-xs-12" for="example-select">{{ trans('admin.property_status') }}</label>
             <div class="col-sm-12">
-
-                {!! Form::select('meta[property_status]', ['Option #1', 'Option #2', 'Option #3'], _postMeta($post->id, 'property_status'), ['class' => 'form-control', 'size' => 1] ) !!}
+                <?php $propertyStatuses = _propertyStatuses();
+                    $propertyStatuses[0] = 'Please Select';
+                    $propertyStatuses = array_reverse($propertyStatuses);
+                    $propertyStatus = _postMeta($post->id, 'property_status') ? _postMeta($post->id, 'property_status') : 0;
+                ?>
+                {!! Form::select('meta[property_status]', $propertyStatuses, $propertyStatus, ['class' => 'form-control', 'size' => 1] ) !!}
 
             </div>
         </div>

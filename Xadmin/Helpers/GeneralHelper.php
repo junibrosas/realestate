@@ -52,6 +52,34 @@ if ( ! function_exists('_breadcrumbs'))
 }
 
 
+if ( ! function_exists('_breadcrumbsWithData'))
+{
+    /**
+     * Return breadcrumbs for each resource methods
+     *
+     * @return string
+     */
+    function _breadcrumbsWithData( $breadcrumbData )
+    {
+        $breadcrumbs  = '<ol class="breadcrumb push-10-t">';
+        foreach ($breadcrumbData as $k => $data) {
+            $isActive = $k == count($breadcrumbData) - 1 ? 'active' : '';
+            if($isActive){
+                $breadcrumbs .= '<li class="'.$isActive.'">'.$data['name'].'</li>';
+            }else{
+                $breadcrumbs .= '<li class="'.$isActive.'"><a href="'.$data['url'].'">'.$data['name'].'</a></li>';
+            }
+
+
+
+            
+        }
+        $breadcrumbs .= '</ol>';
+        return $breadcrumbs;
+    }
+}
+
+
 
 
 if ( ! function_exists('_headerTitle'))

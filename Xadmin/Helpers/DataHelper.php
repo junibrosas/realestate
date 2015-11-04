@@ -1,6 +1,6 @@
 <?php
 
-// Return post url to preview post
+// Return post amenities
 if ( ! function_exists('_dataAmenities'))
 {
     function _dataAmenities()
@@ -33,13 +33,25 @@ if ( ! function_exists('_dataAmenities'))
     	);
     }
 }
-// Return post url to preview post
+// Return category/tag types
 if ( ! function_exists('_dataTagTypes'))
 {
 	function _dataTagTypes(){
 		return [
 			'category' => 'Category',
 			'tag' => 'Tag',
+		];
+	}
+}
+
+// Return post property status
+if ( ! function_exists('_propertyStatuses'))
+{
+	function _propertyStatuses(){
+		return [
+			'sold-out' => 'Sold Out',
+			'for-rent' => 'For Rent',
+			'for-sale' => 'For Sale'
 		];
 	}
 }

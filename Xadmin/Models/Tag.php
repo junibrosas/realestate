@@ -4,18 +4,19 @@ namespace Xadmin\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Xadmin\Models\Post;
 
 class Tag extends Model
 {
     protected $table = "tags";
-    protected $fillable = ["name", "slug", "description", "type", "parent", "count"];
-
+    protected $fillable = ["name", "slug", "description", "type", "parent_id", "order", "count"];
 
     public function posts(){
 		return $this->belongsToMany(\Xadmin\Models\Post::class, 'post_tags');
 	}
 
+	public function parent(){
+		return Tag::where('id', $this->parent_id)->first();
+	}
 
     public static function saveTag(Request $request)
     {
@@ -35,7 +36,7 @@ class Tag extends Model
 		$tag->slug = $request->get('slug') ? $request->get('slug') : str_slug( $request->get('name') );
 		$tag->type = $request->get('type');
 		$tag->description = $request->get('description');
-		$tag->parent = $request->get('parent') ? $request->get('parent') : 0;
+		$tag->parent_id = $request->get('parent_id') ? $request->get('parent_id') : 0;
 		$tag->count = $request->get('count') ? $request->get('count') : 0 ;
 		$tag->save();
 

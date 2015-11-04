@@ -56,7 +56,7 @@ return [
     'tags' => [
         'index' => 'Tags',
         'title' => 'Tags',
-        'add' => 'Add New Tag',
+        'save' => 'Save Tag',
         'add-block' => 'Add New Category/Tag',
         'list' => 'List of Categories/Tags'
     ],

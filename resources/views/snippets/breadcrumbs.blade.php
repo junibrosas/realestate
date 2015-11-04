@@ -4,7 +4,12 @@
             <span class="s1"></span>
         </div>
         <div class="col-lg-12">
-            {!! breadcrumbs() !!}
+            @if(isset($breadcrumbData))
+                {!! _breadcrumbsWithData( $breadcrumbData ) !!}
+            @else 
+                {!! breadcrumbs() !!}
+            @endif
+            
             <h2>
                 @if(isset($pageTitle))
                     {{ $pageTitle }}

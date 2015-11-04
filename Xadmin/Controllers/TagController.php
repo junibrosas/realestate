@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Xadmin\Models\Tag;
+use Xadmin\Models\PostTag;
 
 class TagController extends Controller
 {
@@ -20,9 +21,11 @@ class TagController extends Controller
 
         $tags = Tag::paginate(10);
 
+        $parentTags = Tag::where('type','category')->where('parent_id', 0)->get();
+
         if(!$tag) $tag = new Tag();
 
-        return view('cms::tag.tags', compact('tag', 'tags'));
+        return view('cms::tag.tags', compact('tag', 'tags', 'parentTags'));
     }
 
     /**
@@ -95,6 +98,10 @@ class TagController extends Controller
         $tag = Tag::where('id',$id)->first();
 
         if ($tag && $tag->delete()) {
+            
+            // Delete any reference from the PostTag.
+            PostTag::where('tag_id', $id)->delete();
+
             return redirect()->back()->with('message', 'Deleted Successfully.' );
         }
 

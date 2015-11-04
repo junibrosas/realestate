@@ -42,7 +42,9 @@
             </div>
         </div><!-- end property_wrapper -->
     @empty
-        <h2>No available properties</h2>
+        <div class="text-center">
+            <h2><b>No available properties</b></h2>
+        </div>
     @endforelse
 
     <div class="pagination_wrapper clearfix">

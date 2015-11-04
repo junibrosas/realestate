@@ -13,7 +13,7 @@
 		        	<div class="">
 		        		<?php
 			        		$categoryList = _categoryList();
-			        		unset($categoryList[0]);
+			        		unset($categoryList[0]); // remove 'Please Select' item.
 			        	?>
 			        	@forelse( $categoryList as $categoryId => $categoryName)
 			        		<div class="form-group">

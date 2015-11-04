@@ -16,18 +16,18 @@ use App\Events\FileWasUploaded;
 */
 
 // Admin Routes
-//require_once app_path().'/Xadmin/routes.php';
-
 include( base_path().'/Xadmin/routes.php' );
 
 Route::get('properties', ['as' => 'front.properties', 'uses' => 'FrontController@properties']);
+
+Route::get('category/{slashData?}', ['as' => 'front.category', 'uses' => 'FrontController@category'])
+    ->where('slashData', '(.*)');
 
 // Errors
 Route::group(['prefix' => 'error'], function()
 {
     Route::get('404', ['as' => 'front.error-404', 'uses' => 'ErrorController@error404']);
 });
-
 
 // Auth routes
 Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function()
@@ -43,6 +43,3 @@ Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function()
 // This route should be the last routing to implement.
 Route::get('/{slug?}', ['as' => 'front.index', 'uses' => 'FrontController@index']);
 
-get('file-upload', function(){
-    event(new FileWasUploaded('Hello Jayde!'));
-});

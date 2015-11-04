@@ -8,7 +8,7 @@ if ( ! function_exists('_categoryList'))
      // Return set of category with key "id" and value "name".
     function _categoryList( $tags = array() )
     {
-        if(!$tags) $tags = Tag::where('type','category')->get();
+        if(!$tags) $tags = Tag::where('type','category')->where('parent_id', '!=', 0)->get();
 
     	$tagList[0] = "Please select";
     	if ( count($tags) > 0) {
@@ -53,5 +53,14 @@ if ( ! function_exists('_tagExistInPost'))
         if($postTag) return true;
 
         return false;
+    }
+}
+
+if ( ! function_exists('_tagPermalink'))
+{
+     // Check if post has tag
+    function _tagPermalink( Tag $tag )
+    {
+        return route('front.category', $tag->slug);
     }
 }
