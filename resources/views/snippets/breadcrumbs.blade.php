@@ -4,15 +4,20 @@
             <span class="s1"></span>
         </div>
         <div class="col-lg-12">
-            @if(isset($breadcrumbData))
-                {!! _breadcrumbsWithData( $breadcrumbData ) !!}
+            @if(!in_array(\Request::route()->getName(), ['front.search.index']))
+                @if(isset($breadcrumbData))
+                    {!! _breadcrumbsWithData( $breadcrumbData ) !!}
+                @else 
+                    {!! breadcrumbs() !!}
+                @endif
             @else 
-                {!! breadcrumbs() !!}
+                <div style="margin-top: 30px;"></div>
             @endif
+            
             
             <h2>
                 @if(isset($pageTitle))
-                    {{ $pageTitle }}
+                    {!! $pageTitle !!}
                 @else
                     {{ trans(Route::getCurrentRoute()->getName()) }}
                 @endif

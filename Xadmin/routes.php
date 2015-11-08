@@ -20,9 +20,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin-auth', 'namespace' => 
 Route::group(['prefix' => 'admin', 'namespace' => 'Xadmin\Controllers'], function()
 {
 	// Authentication
-    Route::get('login',  ['as' => 'auth.login', 'uses' => 'AuthController@getLogin']);
-    Route::post('login', ['as' => 'auth.login', 'uses' => 'AuthController@postLogin']);
-    Route::get('logout', ['as' => 'auth.logout', 'uses' => 'AuthController@getLogout']);
+    Route::get('login',  ['as' => 'admin.auth.login', 'uses' => 'AuthController@getLogin']);
+    Route::post('login', ['as' => 'admin.auth.login', 'uses' => 'AuthController@postLogin']);
+    Route::get('logout', ['as' => 'admin.auth.logout', 'uses' => 'AuthController@getLogout']);
 });
 
 Route::get('test', function(){

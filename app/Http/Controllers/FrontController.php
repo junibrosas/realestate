@@ -16,7 +16,6 @@ class FrontController extends Controller
     }
 
     public function index($slug = ''){
-
         if($slug)
             return $this->dispatch(new \App\Jobs\Post($slug));
 

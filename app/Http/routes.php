@@ -1,8 +1,4 @@
-
 <?php
-
-use App\Events\FileWasUploaded;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +14,18 @@ use App\Events\FileWasUploaded;
 // Admin Routes
 include( base_path().'/Xadmin/routes.php' );
 
+// Front Routes
 Route::get('properties', ['as' => 'front.properties', 'uses' => 'FrontController@properties']);
 
 Route::get('category/{slashData?}', ['as' => 'front.category', 'uses' => 'FrontController@category'])
     ->where('slashData', '(.*)');
+
+// Search Routes
+Route::group(['prefix' => 'search'], function()
+{
+    Route::get('/', ['as' => 'front.search.index', 'uses' => 'SearchController@searchTitle']);
+    Route::get('advance', ['as' => 'front.search.advance', 'uses' => 'SearchController@searchAdvance']);
+});
 
 // Errors
 Route::group(['prefix' => 'error'], function()
@@ -37,7 +41,17 @@ Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function()
     Route::get('/', ['as' => 'auth.index', 'uses' => 'AuthController@getLogin']);
     Route::get('login',  ['as' => 'auth.login', 'uses' => 'AuthController@getLogin']);
     Route::post('login', ['as' => 'auth.login', 'uses' => 'AuthController@postLogin']);
-    Route::get('logout', ['as' => 'auth.logout', 'uses' => 'AuthController@getLogout']);  
+    Route::get('logout', ['as' => 'auth.logout', 'uses' => 'AuthController@getLogout']);
+
+    Route::get('register', ['as' => 'auth.register', 'uses' => 'AuthController@getRegister']);
+	Route::post('register',  ['as' => 'auth.register', 'uses' => 'AuthController@postRegister']);  
+});
+
+// User
+Route::group(['prefix' => 'user', 'namespace' => 'User'], function()
+{
+    Route::resource('properties', 'PropertyController', 
+        ['names' => ['create' => 'front.user.properties.create', 'index' => 'front.user.properties.index']]);
 });
 
 // This route should be the last routing to implement.

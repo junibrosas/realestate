@@ -15,7 +15,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::getPosts()->paginate(10);
+        $posts = Post::where('post_type', 'post')->paginate(10);
         return view('cms::post.posts', compact('posts'));
     }
 
@@ -59,9 +59,10 @@ class PostController extends Controller
   
     public function edit($id)
     {
-        $post = Post::getPosts()->where('id',$id)->first();
+        $post = Post::where('post_type', 'post')->where('id',$id)->first();
+
         if(!isset($post->id))
-            $post = new Post();    
+            $post = new Post();
 
         return view('cms::post.post', compact('post'));
     }
@@ -70,7 +71,7 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         // Find post
-        $post = Post::getPosts()->where('id',$id)->first();
+        $post = Post::where('post_type', 'post')->where('id',$id)->first();
 
         // Save new post
         $post = Post::savePost( $request, $post );
@@ -95,7 +96,7 @@ class PostController extends Controller
    
     public function destroy($id)
     {
-        $post = Post::getPosts()->where('id',$id)->first();
+        $post = Post::where('post_type', 'post')->where('id',$id)->first();
 
         if ($post && $post->delete()) {
             return redirect()->back()->with('message', 'Deleted Successfully.' );

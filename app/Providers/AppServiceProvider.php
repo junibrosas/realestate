@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
+        include_once  __DIR__.'/../Helpers/DataHelper.php';
     }
 
     /**

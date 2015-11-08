@@ -16,7 +16,20 @@ class AuthController extends Controller
 
     protected $loginPath = '/admin/login';
 
-    public function __construct()
+
+    public function getLogin()
+    {
+        return view('cms::auth.login');
+    }
+    
+    public function getRegister()
+    {
+        return view('cms::auth.register');
+    }
+
+    
+
+    /*public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
     }
@@ -32,10 +45,12 @@ class AuthController extends Controller
 
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
-    }
+
+        return $user;
+    }*/
 }

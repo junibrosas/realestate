@@ -55,7 +55,7 @@
                 <?php 
                 $tag->parent_id = $tag->parent_id ? $tag->parent_id : 0;  ?>
 
-                {!! Form::select('parent_id', _categoryList( $parentTags ), $tag->parent_id, ['class' => 'form-control', 'size' => 1] ) !!}
+                {!! Form::select('parent_id', _tagCategoryList( $parentTags ), $tag->parent_id, ['class' => 'form-control', 'size' => 1] ) !!}
 
                 <em>Categories, unlike tags, can have a hierarchy. You might have a Jazz category, and under that have children categories for Bebop and Big Band. Totally optional.</em>
             </div>

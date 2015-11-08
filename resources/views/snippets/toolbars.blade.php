@@ -107,7 +107,13 @@
                         <li><a data-placement="bottom" data-toggle="tooltip" data-original-title="Geek" title="" href="#"><img alt="gr" src="{{ asset('realestate/images/flags/gr.png') }}"></a></li>
                     </ul> --}}
                     <ul class="topmenu pull-right">
-                        <li><a href="{{ url('auth/login') }}"><i class="fa fa-lock"></i> Login / Register</a></li>
+                        @if(!Auth::check())
+                            <li><a href="{{ route('auth.login') }}"><i class="fa fa-lock"></i> Login</a></li>
+                            <li><a href="{{ route('auth.register') }}"><i class="fa fa-book"></i> Register</a></li>
+                        @else
+                            <li><a href="{{ route('auth.logout') }}"><i class="fa fa-sign-out"></i> Logout</a></li>
+                        @endif
+                        
                     </ul><!-- topmenu -->
                 </div><!-- end marketing -->
             </div><!-- end col-lg-6 -->

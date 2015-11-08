@@ -4,6 +4,7 @@ namespace Xadmin\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Xadmin\Models\PostMeta;
 
 class Post extends Model
 {
@@ -11,6 +12,14 @@ class Post extends Model
     protected $fillable = ['user_id', 'title', 'content', 'feature_image', 'is_visible', 'published_at', 'slug', 'post_type', 'meta_keywords', 'meta_description'];
 
 
+    /* RELATIONS */
+    public function postMeta(){
+        return $this->hasMany(PostMeta::class, 'post_id', 'id');
+    }
+
+
+
+    
     // Display posts with type 'post'
     public static function getPosts(){
         return Post::where('post_type', 'post')->where('is_visible', 1);

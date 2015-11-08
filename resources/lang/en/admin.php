@@ -48,7 +48,7 @@ return [
         'blog_content' => 'Content'
     ],
     'auth' => [
-        'login' => 'Login'
+        'login' => 'Login',
     ],
     'categories' => [
         'title' => 'Categories'

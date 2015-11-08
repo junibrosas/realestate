@@ -46,6 +46,9 @@
         <!-- Custom Admin CSS -->
         <link rel="stylesheet" type="text/css" href="{{ asset('xadmin/css/custom-admin.css') }}">
 
+        {{-- Jquery --}}
+        <script src="{{ asset('xadmin/js/core/jquery.min.js') }}"></script>
+
         <!-- You can include a specific file from xadmin/css/themes/ folder to alter the default color theme of the template. eg: -->
         <!-- <link rel="stylesheet" id="css-theme" href="assets/xadmin/css/themes/flat.min.css"> -->
         <!-- END Stylesheets -->
@@ -59,7 +62,7 @@
 
 
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
-        <script src="{{ asset('xadmin/js/core/jquery.min.js') }}"></script>
+        
         <script src="{{ asset('xadmin/js/core/bootstrap.min.js') }}"></script>
         <script src="{{ asset('xadmin/js/core/jquery.slimscroll.min.js') }}"></script>
         <script src="{{ asset('xadmin/js/core/jquery.scrollLock.min.js') }}"></script>

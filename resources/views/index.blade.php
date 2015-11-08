@@ -82,7 +82,7 @@
     <section class="generalwrapper dm-shadow clearfix">
     	<div class="container">
 			<div class="row">
-            	<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 first clearfix">
+            	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 first clearfix">
                 	
                     {{-- Category Groups --}}
                     @include('snippets.block-category-groups')
@@ -96,10 +96,10 @@
 
 				</div><!-- end col-lg-7 -->
 
-				<div class="col-lg-3 col-md-6 col-sm-9 col-xs-12 last clearfix">
-                 	<div class="widget text-center clearfix">
-						<img data-effect="fade" class="img-thumbnail img-responsive" src="{{ asset('realestate/demos/01_banner.png') }}" alt="">
-					</div><!-- end of widget -->  
+				<div class="col-lg-2 col-md-6 col-sm-9 col-xs-12 last clearfix">
+                 	
+                    @include('snippets.block-site-links')
+                    
 				</div><!-- end col-lg-4 --> 
 			</div><!-- end row -->
         </div><!-- end dm_container -->  

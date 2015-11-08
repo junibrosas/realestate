@@ -12,7 +12,7 @@
 		        <div class="col-sm-12 category-list">
 		        	<div class="">
 		        		<?php
-			        		$categoryList = _categoryList();
+			        		$categoryList = _tagCategoryList();
 			        		unset($categoryList[0]); // remove 'Please Select' item.
 			        	?>
 			        	@forelse( $categoryList as $categoryId => $categoryName)

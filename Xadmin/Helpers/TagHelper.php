@@ -3,10 +3,30 @@ use \Illuminate\Support\Collection;
 use \Xadmin\Models\Tag;
 use \Xadmin\Models\PostTag;
 
-if ( ! function_exists('_categoryList'))
+if ( ! function_exists('_tagCategoryParentList'))
 {
-     // Return set of category with key "id" and value "name".
-    function _categoryList( $tags = array() )
+    // Return set of category with key "id" and value "name".
+    function _tagCategoryParentList()
+    {
+        $tags = Tag::where('type','category')->where('parent_id', '==', 0)->get();
+
+        $tagList = array();
+        if ( count($tags) > 0) {
+            foreach ($tags as $tag) {
+                // check if type is a category
+                if($tag->type == 'category'){
+                    $tagList[ $tag->id ] = $tag->name;
+                }
+            }
+        }
+
+        return $tagList;
+    }
+}
+
+if ( ! function_exists('_tagCategoryList'))
+{
+    function _tagCategoryList( $tags = array() )
     {
         if(!$tags) $tags = Tag::where('type','category')->where('parent_id', '!=', 0)->get();
 

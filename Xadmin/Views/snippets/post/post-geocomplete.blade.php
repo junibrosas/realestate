@@ -7,7 +7,7 @@
         <div class="form-group">
             <div class="col-xs-12">
                 <div class="form-material">
-					<input id="geocomplete" type="text" class="form-control" name="meta[location]" placeholder="Type in an address" value="{{ _postMeta($post->id, 'location') }}"> <br>
+					<input id="geocomplete" type="text" class="form-control" name="meta[geo_location]" placeholder="Type in an address" value="{{ _postMeta($post->id, 'geo_location') }}"> <br>
 					<a id="find" class="btn btn-primary btn-square"><i class="fa fa-map-marker"></i> Find Address</a>
 					{{-- Shows the Map here --}}
 					<div class="map_canvas"></div>

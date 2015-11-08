@@ -32,6 +32,7 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('realestate/assets/ico/apple-touch-icon-114x114.png') }}">
 	<link rel="apple-touch-icon" sizes="144x144" href="{{ asset('realestate/assets/ico/apple-touch-icon-144x144.png') }}">
 
+    <script src="{{ asset('realestate/js/jquery-1.10.2.min.js') }}"></script> <!-- Jquery -->
     @yield('head')
 
 </head>
@@ -46,7 +47,7 @@
     
 	<!-- Bootstrap core and JavaScript's
     ================================================== -->
-    <script src="{{ asset('realestate/js/jquery-1.10.2.min.js') }}"></script>
+    
     <script src="{{ asset('realestate/js/bootstrap.js') }}"></script>
     <script src="{{ asset('realestate/js/jquery.parallax.js') }}"></script>
     <script src="{{ asset('realestate/js/jquery.fitvids.js') }}"></script>    

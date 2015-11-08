@@ -55,3 +55,20 @@ if ( ! function_exists('_propertyStatuses'))
 		];
 	}
 }
+
+
+// Return post property status
+/*if ( ! function_exists('_dataCountriesAndLocation'))
+{
+	function _dataCountriesAndLocation(){
+		return [
+			['name' => 'United Arab Emirates', 'cities' => ['Abu Dhabi','Dubai','Sharjah','Ajman','Fujairah','Ras Al Khaimah','Umm Al Quwain'] ],
+			['name' => 'India', 'cities' => ['Mumbai','Kolkata',	'Delhi',	'Chennai',	'Bangalore',	'Hyderabad',	'Ahmadabad',	'Pune',	'Surat','Kanpur',	'Jaipur',	'Lucknow',	'Nagpur',	'Patna',	'Indore',	'Vadodara',	'Bhopal','Coimbatore',	'Ludhiana',	'Kochi','Visakhapatnam',	'Agra','Varanasi',	'Madurai',	'Meerut','Nashik','Jabalpur','Jamshedpur','Asansol',	'Dhanbad',	'Faridabad',	'Allahabad',	'Amritsar',	'Vijayawada','Rajkot',]]
+		];
+	}
+}*/
+
+
+
+	
+	

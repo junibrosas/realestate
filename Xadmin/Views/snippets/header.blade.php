@@ -10,7 +10,7 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-right">
                     <li>
-                        <a tabindex="-1" href="{{ route('auth.logout') }}">
+                        <a tabindex="-1" href="{{ route('admin.auth.logout') }}">
                             <i class="si si-logout pull-right"></i>Log out
                         </a>
                     </li>
