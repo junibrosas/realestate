@@ -127,6 +127,7 @@ if ( ! function_exists('_buildMenu')){
 if ( ! function_exists('_money')){
     function _money($amount, $symbol = '$')
     {
+        if ( is_string( $amount )) $amount = floatval( $amount );
         return $symbol . money_format('%i', $amount);
     }
 }

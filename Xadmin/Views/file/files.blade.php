@@ -3,13 +3,13 @@
 @section('content')
 	<div class="block">
 		<div class="block-header bg-gray-lighter">
-	        <h3 class="block-title">Upload Files</h3>
-	    </div>
-	    <div class="block-content">
+			<h3 class="block-title">Upload Files</h3>
+		</div>
+		<div class="block-content">
 			
 			@include('cms::snippets.ui-dropzone')
 
-	    </div>
+		</div>
 	</div>
 	@include('cms::snippets.block-files')
 
@@ -24,9 +24,9 @@
 	<script src="{{ asset('xadmin/js/plugins/dropzonejs/dropzone.min.js') }}"></script>
 	<script type="text/javascript">
 		$(function () {
-            // Init page helpers (Table Tools helper)
-            App.initHelpers('table-tools');
-        });
+			// Init page helpers (Table Tools helper)
+			App.initHelpers('table-tools');
+		});
 		Dropzone.options.fileMediaUploader = {
 			init: function() {
 				this.on("queuecomplete", function(file) { 

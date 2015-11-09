@@ -21,7 +21,8 @@ return [
     'user' => [
         'properties' => [
             'index' => 'List of Properties',
-            'create' => 'Create Property Post'
+            'create' => 'Create Property Post',
+            'edit' => 'Edit Property'
         ]
     ]
 

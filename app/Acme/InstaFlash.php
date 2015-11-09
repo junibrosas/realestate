@@ -17,6 +17,7 @@ class InstaFlash {
 	{
 		return $this->create( $title, $message, 'info');
 	}
+	
 
 	
 	public function success( $title, $message)

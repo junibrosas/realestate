@@ -7,37 +7,33 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Xadmin\Models\FileMedia;
+use Xadmin\Repositories\FileMediaRepo;
 use File;
 
 class FileController extends Controller
 {
-    public function index()
-    {
-        $files = FileMedia::orderBy('created_at', 'DESC')->get();
-        $selectType = 'multiple';
-        return view('cms::file.files', compact('files', 'selectType'));
-    }
+	protected $fileMediaRepo;
 
-    public function store(Request $request)
-    {
-        $file = FileMedia::upload($request->file('file'));
+	public function __construct( FileMediaRepo $fileMediaRepo ){
+		$this->fileMediaRepo = $fileMediaRepo;
+	}
 
-        FileMedia::create([
-            'filename' => $file->name,
-            'mime_type' => $file->getClientMimeType(),
-            'size' => $file->getClientSize()
-        ]);
+	public function index()
+	{
+		$files = FileMedia::orderBy('created_at', 'DESC')->get();
+		$selectType = 'multiple';
+		return view('cms::file.files', compact('files', 'selectType'));
+	}
 
-        return $file;
-    }
+	public function store(Request $request)
+	{
+		return $this->fileMediaRepo->create( $request );
+	}
 
-    public function destroy($id)
-    {
-        $fileMedia = FileMedia::findOrFail($id);
-        $fileMedia->delete();
+	public function destroy($id)
+	{
+		$this->fileMediaRepo->delete( $id );
 
-        File::delete( config('admin.fileUploadDirectory').$fileMedia->filename );
-
-        return redirect()->back();
-    }
+		return redirect()->back();
+	}
 }

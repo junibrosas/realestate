@@ -51,7 +51,14 @@ Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function()
 Route::group(['prefix' => 'user', 'namespace' => 'User'], function()
 {
     Route::resource('properties', 'PropertyController', 
-        ['names' => ['create' => 'front.user.properties.create', 'index' => 'front.user.properties.index']]);
+        ['names' => [ 
+            'index' => 'front.user.properties.index',
+            'create' => 'front.user.properties.create', 
+            'store' => 'front.user.properties.store',
+            'edit' => 'front.user.properties.edit',
+            'update' => 'front.user.properties.update',
+            'destroy' => 'front.user.properties.delete']
+            ]);
 });
 
 // This route should be the last routing to implement.

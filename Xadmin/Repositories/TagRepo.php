@@ -22,12 +22,12 @@ class TagRepo {
 	// Return all parent categories
 	public function parentCategories(){
 		$parentCategories = Tag::where('parent_id', 0)->where('type', 'category')->get();
-        foreach ($parentCategories as $category) {
-            $subCategories = $this->subCategories( $category->id );
-            $category->subCategories = $subCategories; // insert sub categories.
-        }
+		foreach ($parentCategories as $category) {
+			$subCategories = $this->subCategories( $category->id );
+			$category->subCategories = $subCategories; // insert sub categories.
+		}
 
-        return $parentCategories;
+		return $parentCategories;
 	}
 
 	// Collect all children categories of a specific parent
