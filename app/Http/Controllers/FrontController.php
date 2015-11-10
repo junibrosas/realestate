@@ -28,7 +28,7 @@ class FrontController extends Controller
 	public function properties(){
 		$properties = Post::getPosts()->paginate( config('front.postPerPage') );
 		
-		$properties->setPath('custom/url');
+		$properties->setPath('properties');
 
 		return view('properties', compact('properties'));
 	}
