@@ -111,7 +111,7 @@
 			 <h3 class="big_title">Property Video<small>See the details of the house on the video</small></h3>
 			 <iframe src="http://player.vimeo.com/video/73221098?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</div> -->
-
+		
 		<div class="property_map clearfix">
 			<h3 class="big_title">Property Map<small>{{ _postMeta($post->id, 'geo_location') }}</small></h3>
 			
