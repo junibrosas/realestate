@@ -113,7 +113,7 @@
 		</div> -->
 
 		<div class="property_map clearfix">
-			<h3 class="big_title">Property Map<small>See the address of the house on the map</small></h3>
+			<h3 class="big_title">Property Map<small>{{ _postMeta($post->id, 'geo_location') }}</small></h3>
 			
 			{{-- Shows the Map here --}}
 			<div class="map_canvas"></div>
