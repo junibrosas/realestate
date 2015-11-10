@@ -3,12 +3,12 @@
     	<div class="row header-row">
             <div class="col-lg-4 col-md-6 col-sm-12">
                <div class="logo-wrapper clearfix">
-					<div class="logo">
-						<a href="{{ url() }}" title="Home">
-							<img src="{{ asset('realestate/images/logo.png') }}" alt="Estate">
-						</a>
-					</div><!-- /.site-name -->
-				</div><!-- /.logo-wrapper -->
+                <div class="logo">
+                    <a href="{{ url() }}" title="Home">
+                        <img src="{{ asset('realestate/images/logo.png') }}" alt="Estate" width="250">
+                    </a>
+                </div><!-- /.site-name -->
+                </div><!-- /.logo-wrapper -->
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
             </div>      
@@ -39,13 +39,6 @@
                                 <a href="{{ $item->url() }}" style="text-transform: uppercase;">
                                     {!! $item->title !!}
                                 </a>
-                                {{-- @if($item->hasChildren())
-                                    <ul>
-                                        @foreach($item->children() as $child)
-                                            <li><a href="{{ $child->url() }}">{!! $child->title !!}</a></li>
-                                        @endforeach
-                                    </ul>
-                                @endif --}}
                             </li>
                         @endforeach
                     </ul>

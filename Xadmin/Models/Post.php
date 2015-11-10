@@ -4,14 +4,19 @@ namespace Xadmin\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Xadmin\Models\PostMeta;
 use Illuminate\Support\Facades\Auth;
+use Xadmin\Models\PostMeta;
+use Xadmin\Models\PostTag;
 
 class Post extends Model
 {
 	protected $table = "posts";
 	protected $fillable = ['user_id', 'title', 'content', 'feature_image', 'is_visible', 'published_at', 'slug', 'post_type', 'meta_keywords', 'meta_description'];
 
+
+	public function postTags(){
+		return $this->hasMany( PostTag::class, 'post_id', 'id' );
+	}
 
 	/* RELATIONS */
 	public function postMeta(){

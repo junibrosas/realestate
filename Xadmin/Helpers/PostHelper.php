@@ -138,4 +138,11 @@ if ( ! function_exists('_postExcerpt')){
         return substr($post->content, 0, $limit);
     }
 }
-
+if ( ! function_exists('_postCategories'))
+{
+     // Get List of PostTags objects from a specific post.
+    function _postCategories( Post $post )
+    {
+        return PostTag::where('post_id', $post->id)->where('type', 'category')->get();
+    }
+}
