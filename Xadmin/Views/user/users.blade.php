@@ -6,8 +6,10 @@
 	</div>
 	<div class="block">
 	    <div class="block-content">
-		    <div class="not-available">
-        		No posts available
+		    <div class="table-responsive">
+        		
+		    @include('cms::snippets.table-users')
+
         	</div>
 	    </div>
 	</div>

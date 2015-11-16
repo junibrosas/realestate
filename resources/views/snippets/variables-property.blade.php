@@ -1,5 +1,8 @@
 <?php
+$propertyStatusKey = _postMeta($post->id, 'property_status' );
+
 $title = _postTitle( $post );
+$propertyType = isset( _propertyStatuses()[ $propertyStatusKey ] ) ? _propertyStatuses()[ $propertyStatusKey ]  : "";
 $address = _postMeta( $post->id, 'address' );
 $area = _postMeta($post->id, 'area');
 $country = _postMeta($post->id, 'country');

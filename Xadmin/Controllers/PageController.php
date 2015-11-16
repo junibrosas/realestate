@@ -100,7 +100,7 @@ class PageController extends Controller
         $post = Post::savePost( $request, $post );
 
         // Save new tags
-        PostTag::saveTags( $request->get('tags'), $post );
+        PostTag::saveTags( $request->get('tags'), $post, 'tag' );
 
         return redirect()->back()->withInput();
     }

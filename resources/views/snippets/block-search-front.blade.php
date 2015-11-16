@@ -4,7 +4,7 @@ $countriesJson = json_encode($countries);
 ?>
 
 <div class="col-lg-4 col-md-4 col-sm-12">
-    <div class="searchmodule clearfix" data-effect="slide-right">
+    <div class="searchmodule clearfix" data-effect="slide-right" style="height: 500px;">
 
     {!! Form::open(['route' => 'front.search.advance', 'id'=>'advance_search', 'class' => 'clearfix', 'name' => 'advance_search', 'method' => 'GET']) !!}
         <div class="col-lg-12">

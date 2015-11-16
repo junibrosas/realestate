@@ -16,7 +16,7 @@
 				
 				@include('snippets.property-single-medium')
 
-				<div class="btn-group btn-group-sm btn-block" role="group" aria-label="...">
+				<div class="btn-group btn-group-sm btn-block" role="group" aria-label="..." style="margin-bottom: 20px;">
 					{!! Form::model($post, ['route' => ['front.user.properties.delete', $post->id], 'method' => 'DELETE', 'class' => 'delete-form']) !!}
 						<a href="{{ route('front.user.properties.edit', $post->id) }}" class="btn btn-success" style="width: 50%; float: left"><i class="fa fa-pencil-square-o"></i> Edit</a>
 						<button type="submit" class="btn btn-danger" type="button" style="width: 50%; float: right"><i class="fa fa-trash-o"></i> Delete</button>

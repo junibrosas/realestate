@@ -21,8 +21,10 @@ class FrontController extends Controller
 
 		$properties = Post::getPosts()->take(8)->get();
 		$categories = Tag::take(3)->where('parent_id','!=', 0)->with('posts')->get();
+		$slidePosts = Post::getPosts()->orderByRaw("RAND()")->take(3)->get();
+		$recentPosts = Post::getPosts()->orderByRaw("RAND()")->take(6)->get();
 
-		return view('index', compact('properties', 'categories'));
+		return view('index', compact('properties', 'categories', 'slidePosts', 'recentPosts'));
 	}
 
 	public function properties(){
